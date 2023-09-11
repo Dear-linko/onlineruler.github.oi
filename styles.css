@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.slider {
+    display: flex;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.option {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.option.selected {
+    background-color: #c3c2c2;
+}
+
+.ruler {
+    width: 100%;
+    max-width: 95vw;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: #c3c2c2; /* 设置个背景 */
+    border-radius: 0 0 10px 10px; /* 仅修改底部的直角为圆角 */
+    height: 110px; /* 增加高度以容纳标签 */
+}
+
+.tick {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 10px; /* 将5mm的刻度线高度调整为20像素 */
+    background-color: rgba(0, 0, 0, 0.6); /* 使用半透明的黑色 */
+}
+
+.tick-long {
+    height: 35px; /* 将cm的刻度线高度调整为35像素 */
+}
+
+.tick-mm { /* 1mm刻度线 */
+    height: 15px;
+}
+
+.tick-5mm { /* 5mm刻度线 */
+    height: 25px;
+}
+
+.label {
+    position: absolute;
+    top: 45px; /* 将标签放在刻度线的下方 */
+    transform: translateX(-10%);
+    font-size: 12px;
+    color: #555;
+}
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.describe{
+    width: 97%;
+    padding-left: 3px;
+    padding-right: 3px;
+    max-width: 1000px;
+    text-align: justify;
+    margin-top: 40px;
+    color: #333333;
+}
+.inch {
+    display: none;
+}
+h2{
+    text-align: left!important;
+}
